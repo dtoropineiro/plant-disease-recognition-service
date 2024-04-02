@@ -48,7 +48,7 @@ def predict():
         outputs = model(img)
         _, predicted = outputs.max(1)
         predicted_class = predicted.item()
-    return jsonify({'class_id': predicted_class, 'class_name': classes[predicted_class]})
+    return jsonify({'class_id': predicted_class, 'leafStatus': classes[predicted_class]})
 
 
 if __name__ == '__main__':
